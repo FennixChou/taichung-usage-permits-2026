@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>台中市 2026 使照百戶社區報告（115年1–7月）</title>
+<style>
+  :root{
+    --bg:#F2ECDF; --surface:#FCFAF4; --surface-2:#F7F1E6; --ink:#22271F; --muted:#62665A;
+    --line:#E4DCCB; --primary:#34573B; --primary-strong:#274430; --primary-soft:rgba(52,87,59,.10);
+    --primary-line:rgba(52,87,59,.30); --clay:#8F6234; --warn:#96611B; --danger:#AF4636;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#15170F; --surface:#1E2016; --surface-2:#24271B; --ink:#ECE9DE; --muted:#9D9B88;
+      --line:#2F3123; --primary:#9BC084; --primary-strong:#B4D49E; --primary-soft:rgba(155,192,132,.14);
+      --primary-line:rgba(155,192,132,.38); --clay:#CB9C6E; --warn:#E0AC5B; --danger:#E0806F;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#15170F; --surface:#1E2016; --surface-2:#24271B; --ink:#ECE9DE; --muted:#9D9B88;
+    --line:#2F3123; --primary:#9BC084; --primary-strong:#B4D49E; --primary-soft:rgba(155,192,132,.14);
+    --primary-line:rgba(155,192,132,.38); --clay:#CB9C6E; --warn:#E0AC5B; --danger:#E0806F;
+  }
+  :root[data-theme="light"]{
+    --bg:#F2ECDF; --surface:#FCFAF4; --surface-2:#F7F1E6; --ink:#22271F; --muted:#62665A;
+    --line:#E4DCCB; --primary:#34573B; --primary-strong:#274430; --primary-soft:rgba(52,87,59,.10);
+    --primary-line:rgba(52,87,59,.30); --clay:#8F6234; --warn:#96611B; --danger:#AF4636;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--bg); color:var(--ink); margin:0;
+    font-family:"Segoe UI","Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif;
+    font-size:16px; line-height:1.75;}
+  .wrap{max-width:860px; margin:0 auto; padding:44px 22px;}
+  header.doc h1{font-size:1.55rem; font-weight:600; margin:0 0 6px; text-wrap:balance;}
+  .meta{color:var(--muted); font-size:.88rem; margin:0 0 28px;}
+  h2{font-size:1.15rem; font-weight:600; margin:38px 0 12px;}
+  p{margin:0 0 12px;}
+  .verdict{background:var(--surface); border:1px solid var(--primary-line); border-radius:10px;
+           padding:18px 20px; box-shadow:inset 3px 0 0 var(--primary); margin-bottom:14px;}
+  .verdict .headline{font-size:1.15rem; font-weight:600; color:var(--primary); margin-bottom:6px;}
+  .stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:14px 0;}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 18px;}
+  .stat .n{font-size:1.45rem; font-weight:600; color:var(--primary); font-variant-numeric:tabular-nums;}
+  .stat .l{color:var(--muted); font-size:.82rem; letter-spacing:.04em;}
+  .tablebox{overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface); margin:12px 0;}
+  table{border-collapse:collapse; width:100%; min-width:720px; font-size:.9rem;}
+  th{background:var(--surface-2); color:var(--muted); font-size:.76rem; letter-spacing:.05em; font-weight:600;
+     text-align:left; padding:9px 11px; white-space:nowrap;}
+  td{padding:8px 11px; border-top:1px solid var(--line); vertical-align:top;}
+  td.num{font-variant-numeric:tabular-nums; text-align:right; white-space:nowrap;}
+  .ok{color:var(--primary); font-weight:600;}
+  .warn-t{color:var(--warn); font-weight:600;}
+  .note{color:var(--muted); font-size:.88rem;}
+  ol,ul{margin:0 0 12px; padding-left:1.35em;}
+  li{margin-bottom:6px;}
+  footer{margin-top:40px; padding-top:14px; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem;}
+  @media print{
+    :root{ --bg:#FFFFFF; --surface:#FFFFFF; --surface-2:#F4EFE3; }
+    .wrap{max-width:none; padding:0;}
+    .tablebox{overflow:visible;}
+    table{min-width:0; font-size:.68rem;}
+    th,td,td.num{white-space:normal; padding:5px 7px;}
+    .verdict,.stat{break-inside:avoid;} tr{break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="doc">
+    <h1>台中市 2026 年核發使照・百戶以上社區報告</h1>
+    <p class="meta">統計範圍：民國 115 年 1–7 月核發之使用執照（8 月後尚未發生）｜資料源：台中市都發局建築執照存根開放資料 API｜產製 2026-07-27｜製表：瑪莉（市場開發）</p>
+  </header>
+
+  <div class="verdict">
+    <div class="headline">2026 前 7 個月：百戶以上社區 49 案、共 12,347 戶取得使照</div>
+    <p>115 年 1–7 月台中市共核發使用執照 1,054 張（與 114 年同期 1,048 張持平，資料涵蓋性檢核通過）；其中戶數 ≥100 的社區案 50 張使照、歸併後 <strong>49 案、合計 12,347 戶</strong>。<strong>北屯區以 16 案 3,811 戶居冠</strong>（占全市 31%）、西屯 10 案 2,742 戶次之——這批社區在未來數月陸續交屋，就是 2026 下半年台中交屋潮的主力名單。單一建商以<strong>富宇建設 5 案 1,141 戶</strong>為交屋量王。</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n">49 案</div><div class="l">百戶以上社區（50 張使照歸併）</div></div>
+    <div class="stat"><div class="n">12,347 戶</div><div class="l">合計戶數</div></div>
+    <div class="stat"><div class="n">北屯 16 案</div><div class="l">3,811 戶・全市 31%</div></div>
+    <div class="stat"><div class="n">1,153 戶</div><div class="l">單案最大（烏日新高鐵段）</div></div>
+  </div>
+
+  <h2>一、十大社區（按戶數）</h2>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>#</th><th>區</th><th>地段</th><th>起造人</th><th style="text-align:right">戶數</th><th>樓層/棟數</th><th>發照日</th><th>案名（查證狀態）</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>烏日</td><td>新高鐵段</td><td>寶國建築經理</td><td class="num">1,153</td><td>24層/6棟</td><td>115/07/21</td><td>「新高鐵」<span class="ok">已確認</span></td></tr>
+        <tr><td>2</td><td>北屯</td><td>碧柳段（敦富路）</td><td>浩瀚開發建設</td><td class="num">1,010</td><td>24層/12棟</td><td>115/04/14</td><td class="warn-t">案名待查</td></tr>
+        <tr><td>3</td><td>北屯</td><td>景福段</td><td>豐邑建設</td><td class="num">818</td><td>24層/6棟</td><td>115/07/10</td><td>「豐邑太原YES」<span class="ok">已確認</span></td></tr>
+        <tr><td>4</td><td>西屯</td><td>惠民段</td><td>興富發建設</td><td class="num">679</td><td>37層+36層/2棟（2張使照，同段雙塔研判同案）</td><td>115/03、115/07</td><td class="warn-t">待查（候選：興富發雲頂，未確認）</td></tr>
+        <tr><td>5</td><td>南屯</td><td>寶山段</td><td>富宇建設</td><td class="num">638</td><td>21層/6棟</td><td>115/07/10</td><td>「富宇市政大道」<span class="ok">已確認</span></td></tr>
+        <tr><td>6</td><td>南區</td><td>樹子腳段</td><td>登悅建設</td><td class="num">513</td><td>15層/6棟</td><td>115/05/16</td><td>「登陽大地悅章」<span class="ok">已確認</span></td></tr>
+        <tr><td>7</td><td>太平</td><td>育賢段</td><td>櫻花建設</td><td class="num">459</td><td>15層/7棟</td><td>115/01/13</td><td>「昕光之櫻」<span class="ok">已確認</span></td></tr>
+        <tr><td>8</td><td>西屯</td><td>文商段</td><td>親家建設</td><td class="num">452</td><td>26層/2棟</td><td>115/06/16</td><td>「親家中央公園」<span class="warn-t">高度可能</span></td></tr>
+        <tr><td>9</td><td>西屯</td><td>惠國段</td><td>臺億建築經理</td><td class="num">346</td><td>27層/2棟</td><td>115/06/22</td><td class="warn-t">案名待查</td></tr>
+        <tr><td>10</td><td>豐原</td><td>豐田段</td><td>坤聯富建設</td><td class="num">298</td><td>14層/4棟</td><td>115/04/24</td><td>「坤聯富豐原匯」<span class="ok">已確認</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">※ 碧柳段浩瀚開發原歸併為 1,202 戶一案，經原始使照複核（兩張使照的建照年度 110 vs 112、建築師、街廓皆不同）判定為<strong>兩個不同案場</strong>，已拆列：24層12棟 1,010 戶（本表 #2）與 17層2棟 192 戶（完整表 #17）。</p>
+
+  <h2>二、完整清單（49 案，按戶數排序）</h2>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>#</th><th>區</th><th>地段</th><th>起造人</th><th style="text-align:right">戶數</th><th>樓層/棟數</th><th>發照日</th><th>使照字號（115中都使字）</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>烏日</td><td>新高鐵段</td><td>寶國建築經理</td><td class="num">1,153</td><td>24層/6棟</td><td>07/21</td><td>第01041號</td></tr>
+        <tr><td>2</td><td>北屯</td><td>碧柳段</td><td>浩瀚開發建設</td><td class="num">1,010</td><td>24層/12棟</td><td>04/14</td><td>第00447號</td></tr>
+        <tr><td>3</td><td>北屯</td><td>景福段</td><td>豐邑建設</td><td class="num">818</td><td>24層/6棟</td><td>07/10</td><td>第01002號</td></tr>
+        <tr><td>4</td><td>西屯</td><td>惠民段</td><td>興富發建設</td><td class="num">679</td><td>37層/1棟＋36層/1棟</td><td>03/13、07/03</td><td>第00303、00964號</td></tr>
+        <tr><td>5</td><td>南屯</td><td>寶山段</td><td>富宇建設</td><td class="num">638</td><td>21層/6棟</td><td>07/10</td><td>第01003號</td></tr>
+        <tr><td>6</td><td>南區</td><td>樹子腳段</td><td>登悅建設</td><td class="num">513</td><td>15層/6棟</td><td>05/16</td><td>第00662號</td></tr>
+        <tr><td>7</td><td>太平</td><td>育賢段</td><td>櫻花建設</td><td class="num">459</td><td>15層/7棟</td><td>01/13</td><td>第00072號</td></tr>
+        <tr><td>8</td><td>西屯</td><td>文商段</td><td>親家建設</td><td class="num">452</td><td>26層/2棟</td><td>06/16</td><td>第00842號</td></tr>
+        <tr><td>9</td><td>西屯</td><td>惠國段</td><td>臺億建築經理</td><td class="num">346</td><td>27層/2棟</td><td>06/22</td><td>第00881號</td></tr>
+        <tr><td>10</td><td>豐原</td><td>豐田段</td><td>坤聯富建設</td><td class="num">298</td><td>14層/4棟</td><td>04/24</td><td>第00525號</td></tr>
+        <tr><td>11</td><td>西屯</td><td>惠來厝段</td><td>鉅陞國際開發</td><td class="num">284</td><td>19層/2棟</td><td>06/25</td><td>第00911號</td></tr>
+        <tr><td>12</td><td>南區</td><td>頂橋子頭段</td><td>惠昇建設</td><td class="num">271</td><td>26層/2棟</td><td>05/28</td><td>第00726號</td></tr>
+        <tr><td>13</td><td>后里</td><td>后寶段</td><td>中華建築經理</td><td class="num">244</td><td>9層/4棟</td><td>05/13</td><td>第00629號</td></tr>
+        <tr><td>14</td><td>西屯</td><td>文商段</td><td>臺億建築經理</td><td class="num">239</td><td>28層/4棟</td><td>07/03</td><td>第00965號</td></tr>
+        <tr><td>15</td><td>大里</td><td>東湖段</td><td>大里市中興國宅都市更新會</td><td class="num">222</td><td>20層/2棟</td><td>04/14</td><td>第00448號</td></tr>
+        <tr><td>16</td><td>西屯</td><td>惠順段</td><td>聯聚建設</td><td class="num">194</td><td>27層/1棟</td><td>06/30</td><td>第00929號</td></tr>
+        <tr><td>17</td><td>北屯</td><td>碧柳段（敦富一街）</td><td>浩瀚開發建設</td><td class="num">192</td><td>17層/2棟</td><td>03/18</td><td>第00325號</td></tr>
+        <tr><td>18</td><td>北屯</td><td>溝背段</td><td>登悅建設</td><td class="num">183</td><td>17層/2棟</td><td>02/05</td><td>第00188號</td></tr>
+        <tr><td>19</td><td>西區</td><td>東昇段八/九小段、三民段七小段</td><td>大毅建設</td><td class="num">181</td><td>13層/1棟</td><td>02/13</td><td>第00225號</td></tr>
+        <tr><td>20</td><td>北屯</td><td>松昌段</td><td>冠德建設</td><td class="num">173</td><td>24層/1棟</td><td>06/15</td><td>第00840號</td></tr>
+        <tr><td>21</td><td>北屯</td><td>平田段</td><td>鼎佳建設</td><td class="num">169</td><td>15層/3棟</td><td>05/07</td><td>第00586號</td></tr>
+        <tr><td>22</td><td>北屯</td><td>文北段</td><td>惠昇建設</td><td class="num">169</td><td>15層/2棟</td><td>06/13</td><td>第00829號</td></tr>
+        <tr><td>23</td><td>北屯</td><td>榮德段</td><td>真道投資</td><td class="num">166</td><td>22層/2棟</td><td>01/26</td><td>第00131號</td></tr>
+        <tr><td>24</td><td>沙鹿</td><td>沙工北段</td><td>久漾建設</td><td class="num">166</td><td>15層/5棟</td><td>02/12</td><td>第00212號</td></tr>
+        <tr><td>25</td><td>南屯</td><td>寶文段</td><td>理和建設</td><td class="num">159</td><td>14層/2棟</td><td>01/20</td><td>第00097號</td></tr>
+        <tr><td>26</td><td>梧棲</td><td>市鎮南段</td><td>益翔建設</td><td class="num">157</td><td>15層/1棟</td><td>03/12</td><td>第00294號</td></tr>
+        <tr><td>27</td><td>西屯</td><td>大墩段</td><td>理仁建設</td><td class="num">157</td><td>23層/1棟</td><td>06/26</td><td>第00928號</td></tr>
+        <tr><td>28</td><td>太平</td><td>福平段</td><td>聚悅建設</td><td class="num">151</td><td>15層/2棟</td><td>01/07</td><td>第00032號</td></tr>
+        <tr><td>29</td><td>大里</td><td>東湖段</td><td>富宇建設</td><td class="num">151</td><td>15層/2棟</td><td>05/16</td><td>第00663號</td></tr>
+        <tr><td>30</td><td>西屯</td><td>廣明段</td><td>中國建築經理</td><td class="num">148</td><td>9層/13棟</td><td>07/07</td><td>第00984號</td></tr>
+        <tr><td>31</td><td>東區</td><td>旱新段</td><td>泓瑞建設</td><td class="num">135</td><td>14層/1棟</td><td>04/03</td><td>第00399號</td></tr>
+        <tr><td>32</td><td>北屯</td><td>仁平段、平田段</td><td>臺億建築經理</td><td class="num">132</td><td>14層/2棟</td><td>01/28</td><td>第00153號</td></tr>
+        <tr><td>33</td><td>西屯</td><td>福德段</td><td>晟億地產</td><td class="num">132</td><td>23層/1棟</td><td>04/07</td><td>第00407號</td></tr>
+        <tr><td>34</td><td>北屯</td><td>崇德段</td><td>富宇建設</td><td class="num">126</td><td>22層/1棟</td><td>01/21</td><td>第00109號</td></tr>
+        <tr><td>35</td><td>沙鹿</td><td>紅竹段</td><td>宏亞建設開發</td><td class="num">125</td><td>12層/51棟</td><td>06/03</td><td>第00764號</td></tr>
+        <tr><td>36</td><td>沙鹿</td><td>平等段</td><td>富宇建設</td><td class="num">123</td><td>7層/3棟</td><td>04/23</td><td>第00523號</td></tr>
+        <tr><td>37</td><td>后里</td><td>文化段</td><td>坤悅開發</td><td class="num">121</td><td>13層/2棟</td><td>05/10</td><td>第00595號</td></tr>
+        <tr><td>38</td><td>北屯</td><td>環中段</td><td>林鼎實業</td><td class="num">121</td><td>21層/1棟</td><td>06/08</td><td>第00804號</td></tr>
+        <tr><td>39</td><td>北屯</td><td>太祥段</td><td>盛築建設</td><td class="num">115</td><td>15層/2棟</td><td>07/03</td><td>第00959號</td></tr>
+        <tr><td>40</td><td>北屯</td><td>東山段</td><td>臺中市政府捷運工程局</td><td class="num">113</td><td>22層/1棟</td><td>03/10</td><td>第00279號</td></tr>
+        <tr><td>41</td><td>北屯</td><td>敦和段</td><td>精銳建設</td><td class="num">112</td><td>20層/5棟</td><td>03/10</td><td>第00277號</td></tr>
+        <tr><td>42</td><td>西屯</td><td>福德段</td><td>泰御建設</td><td class="num">111</td><td>19層/1棟</td><td>01/08</td><td>第00035號</td></tr>
+        <tr><td>43</td><td>梧棲</td><td>南簡段</td><td>藍圖營造</td><td class="num">111</td><td>15層/1棟</td><td>04/27</td><td>第00530號</td></tr>
+        <tr><td>44</td><td>烏日</td><td>新榮泉段</td><td>坤悅開發</td><td class="num">111</td><td>15層/1棟</td><td>06/24</td><td>第00896號</td></tr>
+        <tr><td>45</td><td>北屯</td><td>東光段</td><td>昂峰建設</td><td class="num">106</td><td>14層/4棟</td><td>01/16</td><td>第00093號</td></tr>
+        <tr><td>46</td><td>北屯</td><td>美和段</td><td>新業建設</td><td class="num">106</td><td>14層/2棟</td><td>06/06</td><td>第00785號</td></tr>
+        <tr><td>47</td><td>西區</td><td>美段</td><td>富宇建設</td><td class="num">103</td><td>24層/2棟</td><td>07/09</td><td>第00998號</td></tr>
+        <tr><td>48</td><td>東區</td><td>練武段</td><td>鵬程建設</td><td class="num">101</td><td>19層/1棟</td><td>02/13</td><td>第00229號</td></tr>
+        <tr><td>49</td><td>太平</td><td>樹孝段</td><td>大毅建設</td><td class="num">101</td><td>14層/1棟</td><td>05/27</td><td>第00731號</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>三、分區與按月統計</h2>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>行政區</th><th style="text-align:right">案數</th><th style="text-align:right">戶數</th><th>行政區</th><th style="text-align:right">案數</th><th style="text-align:right">戶數</th></tr></thead>
+      <tbody>
+        <tr><td>北屯區</td><td class="num">16</td><td class="num">3,811</td><td>沙鹿區</td><td class="num">3</td><td class="num">414</td></tr>
+        <tr><td>西屯區</td><td class="num">10</td><td class="num">2,742</td><td>大里區</td><td class="num">2</td><td class="num">373</td></tr>
+        <tr><td>烏日區</td><td class="num">2</td><td class="num">1,264</td><td>后里區</td><td class="num">2</td><td class="num">365</td></tr>
+        <tr><td>南屯區</td><td class="num">2</td><td class="num">797</td><td>豐原區</td><td class="num">1</td><td class="num">298</td></tr>
+        <tr><td>南區</td><td class="num">2</td><td class="num">784</td><td>西區</td><td class="num">2</td><td class="num">284</td></tr>
+        <tr><td>太平區</td><td class="num">3</td><td class="num">711</td><td>梧棲區</td><td class="num">2</td><td class="num">268</td></tr>
+        <tr><td colspan="3"></td><td>東區</td><td class="num">2</td><td class="num">236</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>按發照月份（使照張數）：1月 8、2月 4、3月 5、4月 7、5月 7、<strong>6月 11</strong>、7月 8——6 月為高峰；多數社區在使照核發後 3〜9 個月內完成交屋，<strong>2026 Q4〜2027 Q2 將是這批 1.2 萬戶的交屋高峰</strong>。</p>
+  <p>建商交屋量排行：<strong>富宇建設 5 案 1,141 戶</strong>（市政大道／大里東湖／崇德／沙鹿平等／西區美段）、臺億建經 3 案 717 戶、登悅（登陽體系）2 案 696 戶、興富發 679 戶、惠昇 2 案 440 戶、坤悅 2 案 232 戶、大毅 2 案 282 戶。</p>
+
+  <h2>四、資料品質與注意事項</h2>
+  <ul>
+    <li><span class="ok">涵蓋性檢核通過</span>：115 年 1–7 月全量 1,054 張，與 114 年同期 1,048 張持平（+0.6%），無同源資料庫民國 97–99 年那類缺漏跡象。</li>
+    <li><span class="warn-t">歸併判斷</span>：同「起造人＋地段」歸併為一案；碧柳段浩瀚兩張使照經複核（建照年度、建築師、街廓皆異）拆為兩案；惠民段興富發兩張（37F＋36F 雙塔）研判同案保留歸併。</li>
+    <li><span class="warn-t">案名查證</span>：僅 7 案已確認、1 案高度可能，其餘標「待查」——使照存根不含建案名，且多案起造人為「建築經理公司」（寶國／臺億／中華／中國建經＝代辦性質，非品牌建商），需逐案比對 591／實價登錄才能補齊，可另派工。</li>
+    <li>戶數為使照存根「戶數」欄原值；捷運工程局東山段 113 戶為公共住宅性質，開發時列參考。</li>
+  </ul>
+
+  <footer>資料源：台中市都發局建築執照存根開放資料 API（mcgbm.taichung.gov.tw/opendata，2026-07-27 撈取）；統計與歸併：如菓市場開發（瑪莉）；完整原始資料另存 CSV/JSON 備查。本報告供如菓內部市場開發使用。</footer>
+</div>
+</body>
+</html>
