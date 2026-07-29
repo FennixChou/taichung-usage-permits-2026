@@ -52,6 +52,8 @@
   .ok{color:var(--primary); font-weight:600;}
   .warn-t{color:var(--warn); font-weight:600;}
   .note{color:var(--muted); font-size:.88rem;}
+  .trap{display:block; color:var(--danger); font-size:.78rem; font-weight:600; margin-top:4px; white-space:normal;}
+  .trap-unsure{display:block; color:var(--warn); font-size:.78rem; font-weight:600; margin-top:4px; white-space:normal;}
   ol,ul{margin:0 0 12px; padding-left:1.35em;}
   li{margin-bottom:6px;}
   footer{margin-top:40px; padding-top:14px; border-top:1px solid var(--line); color:var(--muted); font-size:.88rem;}
@@ -69,7 +71,7 @@
 <div class="wrap">
   <header class="doc">
     <h1>台中市 2026 年核發使照・百戶以上社區報告</h1>
-    <p class="meta">統計範圍：民國 115 年 1–7 月核發之使用執照（8 月後尚未發生）｜資料源：台中市都發局建築執照存根開放資料 API｜產製 2026-07-27（同日完成 49 案建案名稱四路並行補查＋新增第五章「申請中推定」368 案分析）｜製表：瑪莉（市場開發）</p>
+    <p class="meta">統計範圍：民國 115 年 1–7 月核發之使用執照（8 月後尚未發生）｜資料源：台中市都發局建築執照存根開放資料 API｜產製 2026-07-27（同日完成 49 案建案名稱四路並行補查＋新增第五章「申請中推定」368 案分析）｜2026-07-29 補充：5-1 表 15 案「建照前綴年陷阱」逐案覆核（12 案確認老案、3 案待確認，見 5-1 節說明）｜製表：瑪莉（市場開發）</p>
   </header>
 
   <div class="verdict">
@@ -199,6 +201,7 @@
     <div class="stat"><div class="n">368 案</div><div class="l">已開工未領使照（推定母體）</div></div>
     <div class="stat"><div class="n">85,307 戶</div><div class="l">母體合計戶數</div></div>
     <div class="stat"><div class="n">88 案</div><div class="l">完工在即（111–112 建照）20,450 戶</div></div>
+    <div class="stat"><div class="n">76 案*</div><div class="l">完工在即修正後（88−12 案確認老案，見 5-1 節）</div></div>
     <div class="stat"><div class="n">280 案</div><div class="l">施工中後期（113–114 建照）64,857 戶</div></div>
   </div>
 
@@ -208,36 +211,36 @@
       <thead><tr><th>#</th><th>區</th><th>地段</th><th>起造人</th><th style="text-align:right">戶數</th><th>樓層/棟數</th><th>建照發照日</th><th>建照字號</th><th>案名（查證完成）</th></tr></thead>
       <tbody>
         <tr><td>1</td><td>北屯</td><td>竹興段</td><td>精銳建設</td><td class="num">167</td><td>14層/2棟</td><td>111/01/03</td><td>108中都建字第01756號</td><td class="note">查無</td></tr>
-        <tr><td>2</td><td>烏日</td><td>新站南段</td><td>龍寶建設</td><td class="num">142</td><td>15層/4棟</td><td>111/01/19</td><td>106中都建字第02213號</td><td>龍寶園臻邸<span class="warn-t">（高度可能）</span></td></tr>
-        <tr><td>3</td><td>北屯</td><td>文北段</td><td>鉅陞建設</td><td class="num">172</td><td>15層/3棟</td><td>111/01/20</td><td>109中都建字第00311號</td><td>鉅陞敦富花園</td></tr>
+        <tr><td>2</td><td>烏日</td><td>新站南段</td><td>龍寶建設</td><td class="num">142</td><td>15層/4棟</td><td>111/01/19</td><td>106中都建字第02213號</td><td>龍寶園臻邸<span class="warn-t">（高度可能）</span><span class="trap">⚠️前綴年陷阱：建照原核發106年(2017)，非111年；591市場頁＋龍寶建設官網證實已完工交屋多年（大量實價成交） → 確認老案</span></td></tr>
+        <tr><td>3</td><td>北屯</td><td>文北段</td><td>鉅陞建設</td><td class="num">172</td><td>15層/3棟</td><td>111/01/20</td><td>109中都建字第00311號</td><td>鉅陞敦富花園<span class="trap">⚠️前綴年陷阱：建照原核發109年(2020)，非111年；591市場頁298筆成交、屋齡約3年 → 確認老案</span></td></tr>
         <tr><td>4</td><td>北屯</td><td>碧柳段</td><td>大城地產</td><td class="num">174</td><td>12層/4棟</td><td>111/02/09</td><td>108中都建字第01870號</td><td class="note">查無</td></tr>
-        <tr><td>5</td><td>東</td><td>旱溪段</td><td>浩瀚開發建設</td><td class="num">266</td><td>24層/16棟</td><td>111/02/15</td><td>107中都建字第02540號</td><td>浩瀚MVP</td></tr>
-        <tr><td>6</td><td>南屯</td><td>建功段</td><td>麗寶建設</td><td class="num">329</td><td>15層/3棟</td><td>111/03/11</td><td>108中都建字第01346號</td><td>麗寶微笑城市2（米蘭花園）<span class="warn-t">（高度可能）</span></td></tr>
+        <tr><td>5</td><td>東</td><td>旱溪段</td><td>浩瀚開發建設</td><td class="num">266</td><td>24層/16棟</td><td>111/02/15</td><td>107中都建字第02540號</td><td>浩瀚MVP<span class="trap">⚠️前綴年陷阱：建照原核發107年(2018)，非111年；cthouse社區頁載明完工日2022/06/15（2019/07動土） → 確認老案</span></td></tr>
+        <tr><td>6</td><td>南屯</td><td>建功段</td><td>麗寶建設</td><td class="num">329</td><td>15層/3棟</td><td>111/03/11</td><td>108中都建字第01346號</td><td>麗寶微笑城市2（米蘭花園）<span class="warn-t">（高度可能）</span><span class="trap">⚠️前綴年陷阱：建照原核發108年(2019)，非111年；大橘團隊建案頁載明完工時間111年06月（距發照僅3個月，時序不合理） → 確認老案</span></td></tr>
         <tr><td>7</td><td>北屯</td><td>北屯段</td><td>臺中市政府住宅發展工程處處長:陳全成</td><td class="num">226</td><td>11層/1棟</td><td>111/03/23</td><td>107中都建字第01394號</td><td>北屯眷戀山光好宅（北屯段社會住宅）<span class="warn-t">（高度可能）</span></td></tr>
-        <tr><td>8</td><td>東</td><td>旱新段</td><td>新業建設</td><td class="num">154</td><td>15層/2棟</td><td>111/04/01</td><td>108中都建字第02167號</td><td>新業自由居</td></tr>
-        <tr><td>9</td><td>豐原</td><td>豐洲段</td><td>寰聚建設</td><td class="num">257</td><td>15層/4棟</td><td>111/04/11</td><td>108中都建字第01376號</td><td>國聚之境</td></tr>
+        <tr><td>8</td><td>東</td><td>旱新段</td><td>新業建設</td><td class="num">154</td><td>15層/2棟</td><td>111/04/01</td><td>108中都建字第02167號</td><td>新業自由居<span class="trap-unsure">⚠️前綴年陷阱疑慮：建照原核發108年(2019)；591顯示已交屋、屋齡約4年，但查無獨立完工欄位佐證，不排除同名異案或欄位快取 → 待確認</span></td></tr>
+        <tr><td>9</td><td>豐原</td><td>豐洲段</td><td>寰聚建設</td><td class="num">257</td><td>15層/4棟</td><td>111/04/11</td><td>108中都建字第01376號</td><td>國聚之境<span class="trap">⚠️前綴年陷阱：建照原核發108年(2019)，非111年；國聚建設官網載明「100%完銷」 → 確認老案（官網259戶 vs 建照257戶，2戶落差待覆核）</span></td></tr>
         <tr><td>10</td><td>大雅</td><td>四德段</td><td>鼎佳建設</td><td class="num">113</td><td>12層/2棟</td><td>111/04/25</td><td>108中都建字第02430號</td><td class="note">查無</td></tr>
-        <tr><td>11</td><td>太平</td><td>新興段</td><td>泓瑞建設</td><td class="num">130</td><td>14層/1棟</td><td>111/04/25</td><td>108中都建字第01883號</td><td>水美捷堡</td></tr>
+        <tr><td>11</td><td>太平</td><td>新興段</td><td>泓瑞建設</td><td class="num">130</td><td>14層/1棟</td><td>111/04/25</td><td>108中都建字第01883號</td><td>水美捷堡<span class="trap">⚠️前綴年陷阱：建照原核發108年(2019)，非111年；591市場頁273筆成交 → 確認老案（完工月份為單源待複核）</span></td></tr>
         <tr><td>12</td><td>梧棲</td><td>庄北段</td><td>佳鋐建設</td><td class="num">186</td><td>15層/3棟</td><td>111/04/30</td><td>111中都建字第00895號</td><td>佳鋐首耀</td></tr>
         <tr><td>13</td><td>南屯</td><td>寶山段</td><td>富宇建設</td><td class="num">268</td><td>23層/2棟</td><td>111/05/03</td><td>106中都建字第02068號</td><td class="note">查無</td></tr>
         <tr><td>14</td><td>大里</td><td>健民段</td><td>昆祐建設</td><td class="num">237</td><td>15層/11棟</td><td>111/05/07</td><td>111中都建字第01011號</td><td>昌祐幸福大里（昆祐建設）<span class="warn-t">（高度可能）</span></td></tr>
-        <tr><td>15</td><td>南</td><td>樹子腳段</td><td>勝興建設</td><td class="num">271</td><td>14層/4棟</td><td>111/05/27</td><td>108中都建字第01568號</td><td>文心大慶</td></tr>
-        <tr><td>16</td><td>南屯</td><td>田心段</td><td>佳泰建設</td><td class="num">186</td><td>26層/2棟</td><td>111/05/27</td><td>108中都建字第01085號</td><td>佳泰大方</td></tr>
+        <tr><td>15</td><td>南</td><td>樹子腳段</td><td>勝興建設</td><td class="num">271</td><td>14層/4棟</td><td>111/05/27</td><td>108中都建字第01568號</td><td>文心大慶<span class="trap-unsure">⚠️前綴年陷阱疑慮：建照原核發108年(2019)；591示屋齡3年/625筆成交，惟bpm.com.tw同建照字號載明使照「暫無」，兩者證據衝突 → 待確認</span></td></tr>
+        <tr><td>16</td><td>南屯</td><td>田心段</td><td>佳泰建設</td><td class="num">186</td><td>26層/2棟</td><td>111/05/27</td><td>108中都建字第01085號</td><td>佳泰大方<span class="trap">⚠️前綴年陷阱：建照原核發108年(2019)，非111年；591新建案頁直接載明已領使照111中都使字第02180號、現況「隨時交屋」 → 確認老案</span></td></tr>
         <tr><td>17</td><td>西屯</td><td>廣明段</td><td>臺億建築經理</td><td class="num">150</td><td>9層/2棟</td><td>111/05/31</td><td>109中都建字第02335號</td><td class="note">查無</td></tr>
         <tr><td>18</td><td>豐原</td><td>新綠山段</td><td>育堂建設</td><td class="num">119</td><td>12層/2棟</td><td>111/06/07</td><td>111中都建字第01145號</td><td>東方大苑</td></tr>
-        <tr><td>19</td><td>龍井</td><td>山腳段</td><td>裕國冷凍冷藏</td><td class="num">135</td><td>12層/13棟</td><td>111/06/07</td><td>107中都建字第02495號</td><td>裕國豐盛</td></tr>
+        <tr><td>19</td><td>龍井</td><td>山腳段</td><td>裕國冷凍冷藏</td><td class="num">135</td><td>12層/13棟</td><td>111/06/07</td><td>107中都建字第02495號</td><td>裕國豐盛<span class="trap-unsure">⚠️前綴年陷阱疑慮：建照原核發107年(2018)；591示屋齡3年/219筆成交（民國110/12即有成交，早於表列發照日），惟bpm.com.tw同建照字號載明使照「暫無」，證據衝突 → 待確認</span></td></tr>
         <tr><td>20</td><td>梧棲</td><td>興農段</td><td>富宇建設</td><td class="num">180</td><td>19層/2棟</td><td>111/06/10</td><td>111中都建字第01161號</td><td>富宇富嶼</td></tr>
         <tr><td>21</td><td>南屯</td><td>永富段</td><td>悅騰建設</td><td class="num">120</td><td>21層/2棟</td><td>111/06/14</td><td>105中都建字第00991號</td><td class="note">查無</td></tr>
         <tr><td>22</td><td>北屯</td><td>東光段</td><td>櫻花建設</td><td class="num">200</td><td>15層/2棟</td><td>111/06/21</td><td>111中都建字第01322號</td><td>櫻花柳川之櫻<span class="warn-t">（高度可能）</span></td></tr>
-        <tr><td>23</td><td>北</td><td>錦村段</td><td>麗寶建設</td><td class="num">186</td><td>24層/1棟</td><td>111/06/27</td><td>103中都建字第03332號</td><td>麗寶依公園</td></tr>
+        <tr><td>23</td><td>北</td><td>錦村段</td><td>麗寶建設</td><td class="num">186</td><td>24層/1棟</td><td>111/06/27</td><td>103中都建字第03332號</td><td>麗寶依公園<span class="trap">⚠️前綴年陷阱：建照原核發103年(2014)，非111年，差距8年為本批最大；591市場頁屋齡約3年、原預售頁已下架查無 → 確認老案</span></td></tr>
         <tr><td>24</td><td>南屯</td><td>鎮福段</td><td>惠昇建設</td><td class="num">224</td><td>14層/3棟</td><td>111/06/29</td><td>111中都建字第01373號</td><td class="note">查無</td></tr>
-        <tr><td>25</td><td>梧棲</td><td>梧棲段</td><td>聚佳建設</td><td class="num">173</td><td>15層/2棟</td><td>111/06/30</td><td>108中都建字第02421號</td><td>聚佳欣世代</td></tr>
+        <tr><td>25</td><td>梧棲</td><td>梧棲段</td><td>聚佳建設</td><td class="num">173</td><td>15層/2棟</td><td>111/06/30</td><td>108中都建字第02421號</td><td>聚佳欣世代<span class="trap">⚠️前綴年陷阱：建照原核發108年(2019)，非111年；591市場頁屋齡約3年、原預售頁已查無 → 確認老案</span></td></tr>
         <tr><td>26</td><td>太平</td><td>育賢段</td><td>拓建建設</td><td class="num">252</td><td>15層/3棟</td><td>111/07/04</td><td>111中都建字第01417號</td><td>拓建悅見山</td></tr>
         <tr><td>27</td><td>烏日</td><td>新高鐵段</td><td>臺億建築經理</td><td class="num">1,674</td><td>20層/9棟</td><td>111/07/19</td><td>108中都建字第00443號</td><td class="note">查無</td></tr>
         <tr><td>28</td><td>南屯</td><td>鎮福段</td><td>大城建設</td><td class="num">161</td><td>14層/2棟</td><td>111/07/19</td><td>111中都建字第01505號</td><td class="note">查無</td></tr>
-        <tr><td>29</td><td>東</td><td>練武段</td><td>名軒開發</td><td class="num">206</td><td>15層/2棟</td><td>111/07/27</td><td>106中都建字第01557號</td><td>台中新站</td></tr>
+        <tr><td>29</td><td>東</td><td>練武段</td><td>名軒開發</td><td class="num">206</td><td>15層/2棟</td><td>111/07/27</td><td>106中都建字第01557號</td><td>台中新站<span class="trap">⚠️前綴年陷阱：建照原核發106年(2017)，非111年；591明載「2026年03月已完銷」＋359筆實際成交 → 確認老案</span></td></tr>
         <tr><td>30</td><td>南屯</td><td>鎮福段</td><td>大城建設</td><td class="num">134</td><td>14層/2棟</td><td>111/07/31</td><td>111中都建字第01523號</td><td class="note">查無</td></tr>
-        <tr><td>31</td><td>南屯</td><td>建功段</td><td>豐邑建設</td><td class="num">615</td><td>24層/6棟</td><td>111/08/12</td><td>108中都建字第00830號</td><td>豐邑菁科城</td></tr>
+        <tr><td>31</td><td>南屯</td><td>建功段</td><td>豐邑建設</td><td class="num">615</td><td>24層/6棟</td><td>111/08/12</td><td>108中都建字第00830號</td><td>豐邑菁科城<span class="trap">⚠️前綴年陷阱：建照原核發108年(2019)，非111年；591市場頁屋齡約3年（houseprice戶數605 vs 建照615小落差） → 確認老案</span></td></tr>
         <tr><td>32</td><td>烏日</td><td>新榮和段</td><td>櫻花建設</td><td class="num">428</td><td>15層/4棟</td><td>111/08/18</td><td>111中都建字第01721號</td><td>櫻花大綻</td></tr>
         <tr><td>33</td><td>沙鹿</td><td>鹿寮段</td><td>兆登建設</td><td class="num">110</td><td>11層/2棟</td><td>111/08/18</td><td>111中都建字第01722號</td><td>兆登櫻</td></tr>
         <tr><td>34</td><td>西屯</td><td>惠國段</td><td>豐邑百貨</td><td class="num">164</td><td>22層/1棟</td><td>111/08/22</td><td>111中都建字第01560號</td><td class="note">查無</td></tr>
@@ -246,7 +249,7 @@
         <tr><td>37</td><td>梧棲</td><td>南簡段</td><td>承玳營造</td><td class="num">100</td><td>11層/1棟</td><td>111/09/23</td><td>111中都建字第02027號</td><td>大道之星（大道100）</td></tr>
         <tr><td>38</td><td>清水</td><td>市鎮北段</td><td>長虹建設</td><td class="num">580</td><td>24層/4棟</td><td>111/09/30</td><td>111中都建字第01948號</td><td class="note">查無</td></tr>
         <tr><td>39</td><td>龍井</td><td>東海段</td><td>精銳建設</td><td class="num">144</td><td>25層/1棟</td><td>111/10/19</td><td>111中都建字第02137號</td><td>精銳WORLD</td></tr>
-        <tr><td>40</td><td>梧棲</td><td>市鎮南段</td><td>合眾建築經理</td><td class="num">315</td><td>15層/4棟</td><td>111/10/26</td><td>107中都建字第02863號</td><td>聯悅馨<span class="warn-t">（高度可能）</span></td></tr>
+        <tr><td>40</td><td>梧棲</td><td>市鎮南段</td><td>合眾建築經理</td><td class="num">315</td><td>15層/4棟</td><td>111/10/26</td><td>107中都建字第02863號</td><td>中港雲頂NO.3<span class="warn-t">（案名經覆核更正，原判定「聯悅馨」不成立）</span><span class="trap">⚠️前綴年陷阱＋案名誤植：建照原核發107年(2018)，非111年。原判定案名「聯悅馨」經建照字號／戶數／起造人交叉比對不成立——市場上的「聯悅馨」係另案（起造聯悅建設，750住+10店+5辦=765戶，建照111中都建字第01160號，屬本報告5-2節280案母體，非本表列案），與 App 內既有「聯悅馨」（id462，梧棲750戶）為同一筆、不受本次覆核影響。本案（107中都建字第02863號）經knowhouse.tw／591交叉核實正確案名為「中港雲頂NO.3」，結構已於111/12/26完工、591示屋齡約3年、483筆已交屋成交，惟正式使用執照迄未核發（已逾期逾3年）→ 確認老案（特殊：已完工入住但使照行政卡關）</span></td></tr>
         <tr><td>41</td><td>南</td><td>樹子腳段</td><td>元城建設</td><td class="num">223</td><td>20層/1棟</td><td>111/10/31</td><td>111中都建字第02221號</td><td>元城上萃</td></tr>
         <tr><td>42</td><td>南屯</td><td>豐富段</td><td>宏銓建設</td><td class="num">112</td><td>14層/10棟</td><td>111/11/15</td><td>111中都建字第02340號</td><td>宏銓山里時晴</td></tr>
         <tr><td>43</td><td>烏日</td><td>新高鐵段</td><td>達麗建設事業</td><td class="num">1,229</td><td>28層/5棟</td><td>111/11/30</td><td>111中都建字第02453號</td><td>達麗白天鵝新高鐵</td></tr>
@@ -299,6 +302,7 @@
     </table>
   </div>
   <p class="note">亮點：烏日新高鐵段有兩個千戶級巨案在路上——臺億建經 1,674 戶（108建00443）與達麗建設 1,229 戶（111建02453）；北屯碧柳段登陽建設 783 戶亦屆完工期。建照階段門牌多未編訂屬正常。案名查證（2026-07-28 六路並行續查完成，88 案全數查訖）：<strong>49 案已確認、10 案高度可能、29 案查無</strong>。「查無」多為建築經理公司代辦、僅有樂居未公開占位名（如惠昇鎮福段、長虹市鎮北段、春虹市鎮北段370）或起造人多案規模皆不符無法綁定者。</p>
+  <p class="note">★<strong>建照前綴年陷阱逐案覆核（2026-07-29）</strong>：88 案表以「建照發照日」篩選 111–112 年建照，但抽查發現 15 案的「建照字號前綴年」（原始核發年）與表列發照日相差 2–8 年不等——強烈疑似「發照日實為變更設計/存根登記日、非原始建照日」，案子可能早已完工交屋。逐案以 591 實價登錄／建商官網／bpm.com.tw／knowhouse.tw 等多方來源覆核 15 案，結論：<strong>12 案確認為老案</strong>（已完工交屋多年，#2 龍寶園臻邸、#3 鉅陞敦富花園、#5 浩瀚MVP、#6 麗寶微笑城市2、#9 國聚之境、#11 水美捷堡、#16 佳泰大方、#23 麗寶依公園、#25 聚佳欣世代、#29 台中新站、#31 豐邑菁科城、#40「聯悅馨」）；<strong>3 案證據衝突、標「待確認」</strong>（#8 新業自由居、#15 文心大慶、#19 裕國豐盛——591 顯示疑似已交屋，但 bpm.com.tw 官方使照欄位同建照字號載明「暫無」，兩者衝突，建議送台中市建築執照存根查詢系統 mcgbm.taichung.gov.tw 以原始建照字號覆核裁定）。<strong>其中 #40 案名經覆核更正</strong>：原判定「聯悅馨」不成立（字號/戶數/起造人三項對不上），正確案名為「中港雲頂NO.3」；市場上真正的「聯悅馨」是另一筆已在 5-2 節 280 案母體中的案子（起造聯悅建設，750住+10店+5辦，建照111中都建字第01160號），與 App 內既有「聯悅馨」（id462，梧棲750戶）為同一案、覆核結果不影響 App 資料。<strong>扣除 12 案確認老案，「完工在即」實際母體修正為 88−12＝76 案</strong>；本次僅抽查 15 案，其餘 73 案暫維持原判定，但抽查結果顯示同類陷阱可能不限這批，建議後續全表比照方法複查。逐案完整證據（來源 URL、前綴年計算、完工佐證）存於內部工作檔 <code>txg_pending_gap_20260729.json</code>。</p>
 
   <h3 style="font-size:1rem;font-weight:600;margin:18px 0 8px">5-2 施工中後期 280 案：前十大（113–114 年建照，按戶數）</h3>
   <div class="tablebox">
